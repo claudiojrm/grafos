@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>UOLTalk - Grafos/Neo4j</title>
+		<link rel="shortcut icon" href="https://hp.imguol.com.br/c/home/layout/camaleao/web/gerais/favicon.ico">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style>
+			.highlight{color:#e7ad52!important;}
+			pre, code { font-size: 17px!important; }
+		</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-menu-title="UOLTalk">
+						<h2 class="highlight">UOLTalk</h2>
+					</section>
+					<section data-menu-title="O que é UOLTalk?">
+						<p>O que é o <span class="highlight">UOLTalk</span>?</p>
+					</section>
+					<section data-menu-title="Descrição">
+						<p>São reuniões periódicas, apresentando conteúdos relevantes para o nosso dia a dia.</p>
+					</section>
+					<section data-menu-title="Objetivos">
+						<p>Os objetivos do <span class="highlight">UOLTalk</span> são:</p>
+						<ul>
+							<li class="fragment">compartilhar conhecimento</li>
+							<li class="fragment">padronizar código</li>
+							<li class="fragment">evoluir equipe</li>
+						</ul>
+					</section>					
+				</section>
+				
+				<section>
+					<section data-menu-title="UOLTalk Javascript">
+						<b class="highlight">UOLTalk <br>Grafos / Neo4j</b> <br>
+					</section>
+					<section data-menu-title="O que abordaremos?">
+						<p>O que abordaremos?</p>
+						<ul class="highlight">
+							<li class="fragment">Teoria dos grafos</li>
+							<li class="fragment">Nós/vértices</li>
+							<li class="fragment">Arestas/relações</li>
+							<li class="fragment">Grafos no nosso dia a dia</li>
+							<li class="fragment">Banco de dados em grafos</li>
+							<li class="fragment">Linguagens de consulta (Cypher, apis, etc.)</li>
+							<li class="fragment">NEO4J</li>
+							<li class="fragment">Cypher (CQL)</li>
+							<li class="fragment">O que fizemos até aqui?</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section data-menu-title="Teoria dos Grafos">
+						<p><b class="highlight">Teoria dos Grafos</b></p>
+						<p class="fragment">A teoria dos grafos é uma parte da matemática <br>que estuda as relações entre os objetos <br>de um determinado conjunto.</p>
+					</section>
+					<section data-menu-title="Nós/Vértices">
+						<p>Grafos em sua estrutura tem o que <br> chamamos de <span class="highlight">nós</span> ou <span class="highlight">vértices</span>.</p>
+					</section>
+					<section data-menu-title="Arestas/Relações">
+						<p>Também temos as <span class="highlight">arestas</span> que são as <span class="highlight">relações</span> entre um nó e outro ou a ele mesmo.</p>						
+					</section>
+					<section data-menu-title="Meme">
+						<img src="meme1.jpg">
+					</section>
+					<section data-menu-title="Representação Gráfica">
+						<p>Representação gráfica:</p>
+						<img src="grapho.png" style="background: #fff;">
+					</section>
+					<section data-menu-title="Meme">
+						<p>Vamos pensar no nosso dia a dia, <br> o que podemos utilizar grafos?</p>
+					</section>
+					<section data-menu-title="Conexões Facebook">
+						<img src="facebook.jpg">
+					</section>
+					<section data-menu-title="Waze">
+						<img src="waze.png" width="30%">
+					</section>
+					<section data-menu-title="Meme">
+						<img src="meme3.jpg">
+					</section>
+					<section data-menu-title="Corrente sanguínea">
+						<img src="sanguinea.jpg">
+					</section>
+					<section data-menu-title="CPTM">
+						<img src="cptm.jpg">
+					</section>
+				</section>
+
+				<section>
+					<section data-menu-title="Banco de dados em Grafos">
+						<p><b class="highlight">Banco de dados em Grafos</b></p>
+						<p class="fragment">Um banco de dados utiliza da estrutura em grafos para consultas semânticas com nós e arestas.</p>
+					</section>
+					<section data-menu-title="NOSQL">
+						<p>É um modelo de banco de dados <br><span class="highlight">não relacional (NOSQL)</span>.</p>
+					</section>
+					<section data-menu-title="Linguagens de consulta">
+						<p>Para recuperar dados em um banco feito <br> em grafo é necessário uma linguagem de <br>consulta diferente de SQL. Mas não existe <br>uma linguagem padrão adotada.</p>
+					</section>
+					<section data-menu-title="Gremlin, SPARQL e Cypher">
+						<p>Existem algumas linguagens para consultas de banco de dados em grafos, por ex: <br><span class="highlight">Gremlin</span>, <span class="highlight">SPARQL</span>, <span class="highlight">CYPHER</span>, etc...</p>
+					</section>
+					<section data-menu-title="Representação Gráfica">
+						<p>Representação gráfica:</p>
+						<img src="bd.png" style="background:#fff;">
+					</section>
+					<section data-menu-title="APIS">
+						<p>Existe a possibilidade das consultas <br>serem realizadas por APIS.</p>
+					</section>
+					<section data-menu-title="GRAPHQL">
+						<p>Uma bem popular é a <span class="highlight">GRAPHQL</span>, <br>que foi criada pelo Facebook.</p>
+						<img src="graphql.png" style="background:#fff;" width="60%">
+					</section>
+					<section data-menu-title="Performance">
+						<p>Um grande ponto positivo de banco de <br>dados em grafos é porque ela <span class="highlight">não pesquisa<br> dados irrelevantes</span> em suas consultas, <br>sendo muito vantajoso para pesquisas <br>de big data em tempo real.</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-menu-title="Meme">
+						<img src="formado.jpeg" width="40%">
+					</section>
+				</section>
+				<section>
+					<section data-menu-title="NEO4J">
+						<p><b class="highlight">NEO4J</b></p>
+						<p class="fragment">É um sistema de gerenciamento de banco de dados em grafo, desenvolvida <br>pela empresa NEO4J INC.</p>
+					</section>
+					<section data-menu-title="CQL">
+						<p>Neo4j utiliza <span class="highlight">Cypher Query Language (CQL)</span></p>
+					</section>
+				</section>
+
+				<section>
+					<section data-menu-title="O que fizemos até aqui?">
+						<p>O que fizemos até aqui com <span class="highlight">neo4j</span> e <span class="highlight">grafos</span>?</p>
+					</section>
+
+					<section data-menu-title="Sitemap">
+						<p>Listagem dos componentes do v3:</p>
+						<img src="sitemap.png">
+					</section>
+
+					<section data-menu-title="Sitemap">
+						<p>Grafos da listagem:</p>
+						<img src="sitemap2.png" width="50%" style="background:#fff;">
+					</section>
+
+					<section data-menu-title="Sitemap">
+						<p>Página do componente:</p>
+						<img src="sitemap3.png">
+					</section>
+
+					<section data-menu-title="Sitemap">
+						<p>Grafos da página do componente:</p>
+						<img src="sitemap4.png" width="50%">
+					</section>
+
+					<section data-menu-title="Fraseado">
+						<p>Projeto pessoal :)</p>
+						<img src="fraseado.png">
+					</section>
+
+					<section data-menu-title="Fraseado">
+						<p>Grafos projeto pessoal :)</p>
+						<img src="fraseado1.png">
+					</section>
+				</section>
+
+				<section data-menu-title="Referências">
+					<p><b class="highlight">Referências</b></p>
+                    <ul>
+						<li><a href="https://www.linkedin.com/in/alejandromoraga/">Alejandro Moraga</a></li>
+						<li><a href="https://neo4j.com/">NEO4J</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Graph_database" target="_blank">Wikipedia</a></li>
+                    </ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'node_modules/reveal.js-menu/menu.js' }
+				]
+			});
+		</script>
+	</body>
+</html>
